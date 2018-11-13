@@ -28,7 +28,7 @@ public abstract class Employee {
     public Employee(){}
     
     //returns the employees pay
-    public abstract double pay(double hours);
+    public abstract double pay();
     
     //updates information about sick days of the employee
     public abstract void deductSickDay();

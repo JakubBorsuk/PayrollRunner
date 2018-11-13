@@ -15,7 +15,8 @@ public class PayrollRunner {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        FullTimeStaff c = new FullTimeStaff(1200,"123123","Hello","w");
+        System.out.println(c.toString());
     }
     
 }
