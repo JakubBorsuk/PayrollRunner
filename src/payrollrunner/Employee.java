@@ -31,7 +31,7 @@ public abstract class Employee {
     public abstract double pay();
     
     //updates information about sick days of the employee
-    public abstract void deductSickDay();
+    public abstract void deductSickDay(float f);
     
     //resets sick day information of an employee
     public abstract void resetSickDay();
