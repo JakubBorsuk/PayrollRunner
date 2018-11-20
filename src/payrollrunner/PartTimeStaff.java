@@ -29,7 +29,7 @@ public class PartTimeStaff extends Employee {
 
     @Override
     public void deductSickDay(float f) {
-        this.sickDaysTaken -= f;
+        this.sickDaysTaken += f;
         }
 
     @Override
@@ -50,5 +50,61 @@ public class PartTimeStaff extends Employee {
     @Override
     public String  toString(){
         return "Title: "+this.title+"\n"+super.toString();
+    }
+
+    /**
+     * @return the numHoursAssigned
+     */
+    public float getNumHoursAssigned() {
+        return numHoursAssigned;
+    }
+
+    /**
+     * @return the hourlyRate
+     */
+    public double getHourlyRate() {
+        return hourlyRate;
+    }
+
+    /**
+     * @return the sickDaysTaken
+     */
+    public float getSickDaysTaken() {
+        return sickDaysTaken;
+    }
+
+    /**
+     * @return the title
+     */
+    public String getTitle() {
+        return title;
+    }
+
+    /**
+     * @param numHoursAssigned the numHoursAssigned to set
+     */
+    public void setNumHoursAssigned(float numHoursAssigned) {
+        this.numHoursAssigned = numHoursAssigned;
+    }
+
+    /**
+     * @param hourlyRate the hourlyRate to set
+     */
+    public void setHourlyRate(double hourlyRate) {
+        this.hourlyRate = hourlyRate;
+    }
+
+    /**
+     * @param sickDaysTaken the sickDaysTaken to set
+     */
+    public void setSickDaysTaken(float sickDaysTaken) {
+        this.sickDaysTaken = sickDaysTaken;
+    }
+
+    /**
+     * @param title the title to set
+     */
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

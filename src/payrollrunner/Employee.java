@@ -45,4 +45,46 @@ public abstract class Employee {
         return "Employee Number: "+this.employeeNumber+
                 "\nEmployee Name: "+this.firstName+" "+this.lastName;
     }
+
+    /**
+     * @return the employeeNumber
+     */
+    public String getEmployeeNumber() {
+        return employeeNumber;
+    }
+
+    /**
+     * @return the firstName
+     */
+    public String getFirstName() {
+        return firstName;
+    }
+
+    /**
+     * @return the lastName
+     */
+    public String getLastName() {
+        return lastName;
+    }
+
+    /**
+     * @param employeeNumber the employeeNumber to set
+     */
+    public void setEmployeeNumber(String employeeNumber) {
+        this.employeeNumber = employeeNumber;
+    }
+
+    /**
+     * @param firstName the firstName to set
+     */
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    /**
+     * @param lastName the lastName to set
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }
