@@ -13,11 +13,13 @@ public class PartTimeStaff extends Employee {
     private float numHoursAssigned;
     private double hourlyRate;
     private float sickDaysTaken = 0;
+    private String title;
     
-    public PartTimeStaff(float numHoursAssigned, double hourlyRate, String employeeNum, String first, String last){
+    public PartTimeStaff(String title, float numHoursAssigned, double hourlyRate, String employeeNum, String first, String last){
         super(employeeNum, first, last);
         this.numHoursAssigned = numHoursAssigned;
         this.hourlyRate = hourlyRate;
+        this.title = title;
     }
 
     @Override
@@ -27,16 +29,26 @@ public class PartTimeStaff extends Employee {
 
     @Override
     public void deductSickDay(float f) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        this.sickDaysTaken -= f;
+        }
 
     @Override
     public void resetSickDay() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        this.sickDaysTaken = 0;
+        }
 
     @Override
     public void printPayStub() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Amount earned this month: "+this.pay());
+        System.out.println("Amount of hours worked: "+(numHoursAssigned - (sickDaysTaken * 8.0)));
+        }
+    
+    public PartTimeStaff compareToSickDay(PartTimeStaff c){
+        return this.sickDaysTaken > c.sickDaysTaken ? this : c;
+    }
+    
+    @Override
+    public String  toString(){
+        return "Title: "+this.title+"\n"+super.toString();
     }
 }
